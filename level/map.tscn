@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdohntm1arwow"]
+[gd_scene load_steps=11 format=3 uid="uid://bdohntm1arwow"]
 
 [ext_resource type="Texture2D" uid="uid://bpn6apdns13qe" path="res://icon.svg" id="1_an45f"]
 [ext_resource type="PackedScene" uid="uid://0lfey5d30t3c" path="res://player/Player.tscn" id="1_tob75"]
@@ -11,6 +11,10 @@ script/source = "extends Node3D
 func _physics_process(delta):
 	get_tree().call_group(\"enemies\", \"update_target_location\", player.global_transform.origin)
 "
+
+[sub_resource type="BoxMesh" id="BoxMesh_tmw0j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yna41"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h0jfl"]
 albedo_color = Color(0, 0, 0, 1)
@@ -31,7 +35,14 @@ script = SubResource("GDScript_len2w")
 
 [node name="RigidBody" type="Node" parent="."]
 
-[node name="RigidBody3D" type="RigidBody3D" parent="RigidBody"]
+[node name="Box" type="RigidBody3D" parent="RigidBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92967, 40.4858, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody/Box"]
+mesh = SubResource("BoxMesh_tmw0j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody/Box"]
+shape = SubResource("BoxShape3D_yna41")
 
 [node name="CSGBox" type="Node" parent="."]
 
