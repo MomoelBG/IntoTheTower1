@@ -94,8 +94,6 @@ bg_color = Color(1, 0, 0.0980392, 1)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_8nk7a")
-JUMP_VELOCITY = 10.0
-fall_damage_threshold = 10
 
 [node name="StadingCollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

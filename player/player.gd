@@ -3,8 +3,8 @@ extends CharacterBody3D
 const  CROUCH_VELOCITY = 0.5
 const  SPRINT_VELOCITY = 2
 const  SPEED = 5
-@export var JUMP_VELOCITY = 4.5
-@export var fall_damage_threshold = 20
+@export var JUMP_VELOCITY = 10
+@export var fall_damage_threshold = 10
 
 var walkingSpeed = 0.5
 var crouchingSpeed = 3.5
