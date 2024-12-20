@@ -1523,12 +1523,11 @@ use_collision = true
 size = Vector3(0.156, 0.055, 0.156)
 material = SubResource("StandardMaterial3D_eb2d3")
 
-[node name="Player" parent="." instance=ExtResource("1_tob75")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36.2552, 0)
-JUMP_VELOCITY = 8.5
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.5, -0.707107, -0.5, 0.707107, -3.09086e-08, 0.707107, -0.5, -0.707107, 0.5, 0, 4.86704, 0)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.5, -0.707107, 0.5, -0.707107, -8.80577e-08, -0.707107, 0.5, -0.707107, -0.5, 0, 4.86704, 0)
+
+[node name="Player" parent="." instance=ExtResource("1_tob75")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.134502, 36.2588, -0.176337)

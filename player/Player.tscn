@@ -94,6 +94,7 @@ bg_color = Color(1, 0, 0.0980392, 1)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_8nk7a")
+JUMP_VELOCITY = 10.0
 fall_damage_threshold = 10
 
 [node name="StadingCollisionShape" type="CollisionShape3D" parent="."]
@@ -127,6 +128,9 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "."
 
+[node name="Flashlight" parent="head/Camera3D" instance=ExtResource("3_07f04")]
+transform = Transform3D(0.726082, 0, 0, 0, 0.726082, 0, 0, 0, 0.726082, 0.667195, -0.388531, -0.644709)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ru12d")
@@ -153,6 +157,3 @@ theme_override_styles/background = SubResource("StyleBoxFlat_v6nij")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vasuy")
 value = 100.0
 show_percentage = false
-
-[node name="Flashlight" parent="ProgressBar" instance=ExtResource("3_07f04")]
-transform = Transform3D(0.726082, 0, 0, 0, 0.726082, 0, 0, 0, 0.726082, 0.667195, 1.11147, -0.644709)

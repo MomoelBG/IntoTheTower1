@@ -60,20 +60,4 @@ light_energy = 0.0
 spot_range = 10.0
 spot_angle = 30.0
 
-[node name="Battery" type="ProgressBar" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -108.0
-offset_top = -78.0
-offset_right = 108.0
-offset_bottom = -51.0
-grow_horizontal = 2
-grow_vertical = 0
-max_value = 1000.0
-step = 1.0
-value = 1000.0
-
 [editable path="Flashlight"]
