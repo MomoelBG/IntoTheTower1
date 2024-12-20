@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://0lfey5d30t3c"]
+[gd_scene load_steps=13 format=3 uid="uid://0lfey5d30t3c"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_8nk7a"]
 [ext_resource type="Script" path="res://player/ray_cast_3d.gd" id="2_4g8u8"]
+[ext_resource type="Texture2D" uid="uid://ck45j4ykjr8pe" path="res://player/hurt.png" id="3_h22eh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4rjp7"]
 
@@ -131,3 +132,16 @@ shape = SubResource("CapsuleShape3D_wptn4")
 [node name="CrawlingCollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.4, 0.24)
 shape = SubResource("CapsuleShape3D_b3qwf")
+
+[node name="HurtOverley" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -3.05176e-05
+offset_right = 771.0
+offset_bottom = 432.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.598786, 0.600098)
+texture = ExtResource("3_h22eh")
