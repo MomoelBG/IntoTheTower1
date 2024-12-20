@@ -15,10 +15,6 @@ run/main_scene="res://level/Title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[display]
-
-window/size/mode=3
-
 [global_group]
 
 enemies=""
