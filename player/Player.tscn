@@ -101,13 +101,9 @@ mesh = SubResource("CapsuleMesh_22pax")
 [node name="Camera3D" type="Camera3D" parent="head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="Interaction" type="RayCast3D" parent="head/Camera3D"]
-transform = Transform3D(1.00344, 0, 0, 0, 0.981512, -0.208627, 0, 0.208627, 0.981512, 0, 0, 0)
-target_position = Vector3(0, -1, -5)
+[node name="RayCast3D" type="RayCast3D" parent="head/Camera3D"]
+transform = Transform3D(1.00344, 0, 0, 0, 0, -1.00344, 0, 1.00344, 0, 0, 0, 0)
 script = ExtResource("2_4g8u8")
-
-[node name="hand" type="Marker3D" parent="head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0521963, -4.47173)
 
 [node name="crosshair" type="Label" parent="head/Camera3D"]
 anchors_preset = 8
