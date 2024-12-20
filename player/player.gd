@@ -4,6 +4,7 @@ const  CROUCH_VELOCITY = 0.5
 const  SPRINT_VELOCITY = 2
 const  SPEED = 5
 @export var JUMP_VELOCITY = 4.5
+@export var fall_damage_threshold = 20
 
 var walkingSpeed = 0.5
 var crouchingSpeed = 3.5
@@ -81,9 +82,10 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	# fall demage
-	var diff = velocity.y - old_vel
-	if diff > 20:
-		print("Ouch")
+	if old_vel < 0:
+		var diff = velocity.y - old_vel
+		if diff > fall_damage_threshold:
+			print("Ouch")
 	old_vel = velocity.y
 
 
