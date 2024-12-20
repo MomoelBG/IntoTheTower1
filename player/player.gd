@@ -16,9 +16,11 @@ var isCrouching = false
 var isCrawling = false
 
 var old_vel : float = 0.0
+var hurt_overley : Tween
 
 @onready var camera = $head/Camera3D
 @onready var anim = $AnimationPlayer
+@onready var hurt_overley = $HurtOverley
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -85,7 +87,7 @@ func _physics_process(delta):
 	if old_vel < 0:
 		var diff = velocity.y - old_vel
 		if diff > fall_damage_threshold:
-			print("Ouch")
+			hurt()
 	old_vel = velocity.y
 
 
@@ -141,3 +143,11 @@ func changeCollisionShapeTo(shape):
 			$CrawlingCollisionShape.disabled = false
 			$StadingCollisionShape.disabled = true
 			$CrouchingCollisionShape.disabled = true
+
+
+func hurt():
+	hurt_overley.modulate = Color.WHITE
+	if hurt_tween:
+		hurt_tween.kill()
+	hurt_tween = create_tween()
+	hurt_tween.tween_property(hurt_overley, "modulate", Color.TRANSPARENT, 0.5)
