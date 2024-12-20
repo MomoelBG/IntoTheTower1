@@ -19,6 +19,7 @@ var old_vel : float = 0.0
 
 @onready var camera = $head/Camera3D
 @onready var anim = $AnimationPlayer
+@onready var progress_bar = $ProgressBar
 
 
 func _unhandled_input(event):
@@ -86,7 +87,7 @@ func _physics_process(delta):
 	if old_vel < 0:
 		var diff = velocity.y - old_vel
 		if diff > fall_damage_threshold:
-			hurt()
+			hurt(diff - fall_damage_threshold)
 	old_vel = velocity.y
 
 
@@ -142,5 +143,5 @@ func changeCollisionShapeTo(shape):
 			$CrouchingCollisionShape.disabled = true
 
 
-func hurt():
-	pass
+func hurt(damage : float):
+	progress_bar.value -= damage
