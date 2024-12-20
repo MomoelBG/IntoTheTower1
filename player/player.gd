@@ -5,6 +5,10 @@ const  SPRINT_VELOCITY = 2
 const  SPEED = 5
 @export var JUMP_VELOCITY = 10
 @export var fall_damage_threshold = 10
+@export_category("Mobile Controls")
+@export 
+
+
 
 var walkingSpeed = 0.5
 var crouchingSpeed = 3.5
