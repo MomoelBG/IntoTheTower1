@@ -68,7 +68,7 @@ func _physics_process(delta):
 		
 		
 		if Input.is_action_just_pressed("lclick"):
-			picked_object()
+			picked_object
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
