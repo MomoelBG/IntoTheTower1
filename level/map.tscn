@@ -29,6 +29,10 @@ albedo_texture = ExtResource("1_an45f")
 [node name="map" type="Node3D"]
 script = SubResource("GDScript_len2w")
 
+[node name="RigidBody" type="Node" parent="."]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="RigidBody"]
+
 [node name="CSGBox" type="Node" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGBox"]

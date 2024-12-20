@@ -65,7 +65,10 @@ func _physics_process(delta):
 		elif isCrawling == true:
 			movementStateChange("uncrawl")
 			trueSpeed = walkingSpeed
-
+		
+		
+		if Input.is_action_just_pressed("lclick"):
+			picked_object()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -83,6 +86,7 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		if Input.is_action_pressed("crouch"):
 			pass
+
 
 
 
