@@ -88,7 +88,7 @@ func _physics_process(delta):
 		var diff = velocity.y - old_vel
 		if diff > fall_damage_threshold:
 			hurt(diff - fall_damage_threshold)
-	old_vel = velocity.y
+	old_vel = velocity.y 
 
 
 func movementStateChange(changeType):
