@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Nouveau projet de jeu"
+config/name="Into The Tower"
 run/main_scene="res://level/Title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=3
 
 [global_group]
 
