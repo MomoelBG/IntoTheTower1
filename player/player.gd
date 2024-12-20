@@ -14,9 +14,13 @@ var trueSpeed = walkingSpeed
 var isCrouching = false
 var isCrawling = false
 
+var picked_object
+var pull_power = 4
 
 @onready var camera = $head/Camera3D
 @onready var anim = $AnimationPlayer
+@onready var interaction = $head/Camera3D/Interaction
+@onready var hand = $head/Camera3D/hand
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -27,6 +31,10 @@ func _unhandled_input(event):
 		get_tree().change_scene_to_file("res://level/PauseMenu.tscn")
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
+func pick_object():
+	var collider = interaction.get_collider()
+	if collider != null and collider is RigidBody3D:
+		print("colliding with a rigid body")
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
