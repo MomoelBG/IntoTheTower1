@@ -1,16 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://bdohntm1arwow"]
+[gd_scene load_steps=15 format=3 uid="uid://bdohntm1arwow"]
 
 [ext_resource type="Texture2D" uid="uid://bpn6apdns13qe" path="res://icon.svg" id="1_an45f"]
 [ext_resource type="PackedScene" uid="uid://0lfey5d30t3c" path="res://player/Player.tscn" id="1_tob75"]
-
-[sub_resource type="GDScript" id="GDScript_len2w"]
-script/source = "extends Node3D
-
-@onready var player = $Player
-
-func _physics_process(delta):
-	get_tree().call_group(\"enemies\", \"update_target_location\", player.global_transform.origin)
-"
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wi8ke"]
 sky_top_color = Color(0, 0.468086, 0.751154, 1)
@@ -53,7 +44,6 @@ albedo_texture = ExtResource("1_an45f")
 albedo_texture = ExtResource("1_an45f")
 
 [node name="map" type="Node3D"]
-script = SubResource("GDScript_len2w")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.5, -0.707107, -0.5, 0.707107, -9.83517e-09, 0.707107, -0.5, -0.707107, 0.5, 0, 4.86704, 0)
