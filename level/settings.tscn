@@ -67,6 +67,8 @@ offset_top = -86.0
 offset_right = 554.0
 offset_bottom = -70.0
 grow_vertical = 2
+focus_neighbor_bottom = NodePath("../../resolution/OptionButton")
+focus_next = NodePath("../../resolution/OptionButton")
 
 [node name="Label" type="Label" parent="audio"]
 layout_mode = 1
@@ -158,6 +160,15 @@ offset_bottom = 143.0
 theme_override_font_sizes/font_size = 30
 text = "Ordinateur"
 
+[node name="Label7" type="Label" parent="Controls"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 389.0
+offset_right = 67.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 30
+text = "Type"
+
 [node name="Label4" type="Label" parent="Controls"]
 layout_mode = 0
 offset_left = 271.0
@@ -225,6 +236,8 @@ offset_right = -16.0
 offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
+focus_neighbor_top = NodePath("../resolution/OptionButton")
+focus_previous = NodePath("../resolution/OptionButton")
 text = "RETOUR"
 
 [connection signal="pressed" from="VBoxContainer/audio" to="." method="_on_audio_pressed"]
