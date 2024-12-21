@@ -1,25 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3aj37iyldj8w"]
+[gd_scene load_steps=8 format=3 uid="uid://b3aj37iyldj8w"]
 
-[ext_resource type="Material" uid="uid://d0dextdseffem" path="res://materials/door.tres" id="1_mdhcv"]
-
-[sub_resource type="GDScript" id="GDScript_6kj1c"]
-script/source = "extends StaticBody3D
-
-var toggle = false
-var interactable = true
-@export var anim: AnimationPlayer
-
-func interact():
-	if interactable == true:
-		interactable = false
-		toggle = !toggle
-		if toggle == false:
-			anim.play(\"close\")
-		if toggle == true:
-			anim.play(\"open\")
-		await get_tree().create_timer(1.0, false).timeout
-		interactable = true
-"
+[ext_resource type="Material" uid="uid://fy13c0772xcs" path="res://materials/gray.tres" id="1_v10s0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xem7i"]
 
@@ -85,13 +66,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.747222, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="hinge"]
 transform = Transform3D(1.472, 0, 0, 0, 2.705, 0, 0, 0, 0.168, -0.747222, 0, 0)
-script = SubResource("GDScript_6kj1c")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D"]
 shape = SubResource("BoxShape3D_xem7i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="hinge/StaticBody3D"]
-material_override = ExtResource("1_mdhcv")
+material_override = ExtResource("1_v10s0")
 mesh = SubResource("BoxMesh_3lraw")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="hinge/StaticBody3D"]
