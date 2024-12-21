@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpkvjlrxk3jp7"]
+[gd_scene load_steps=4 format=3 uid="uid://bpkvjlrxk3jp7"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_5ut1b"]
+[ext_resource type="PackedScene" uid="uid://blejtq8ghcntx" path="res://level/settings.tscn" id="2_cuj6k"]
+[ext_resource type="PackedScene" uid="uid://cvq1e8oa7bwwd" path="res://level/PauseMenu.tscn" id="3_pcb5f"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -45,6 +47,20 @@ text = "PARAMETRES"
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "QUITTER"
+
+[node name="Settings" parent="." instance=ExtResource("2_cuj6k")]
+visible = false
+layout_mode = 1
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_pcb5f")]
+visible = false
+layout_mode = 1
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://0lfey5d30t3c"]
+[gd_scene load_steps=16 format=3 uid="uid://0lfey5d30t3c"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_8nk7a"]
 [ext_resource type="Script" path="res://player/ray_cast_3d.gd" id="2_4g8u8"]
 [ext_resource type="PackedScene" uid="uid://d0pjwia75luq6" path="res://Flashlight.tscn" id="3_07f04"]
+[ext_resource type="PackedScene" uid="uid://cvq1e8oa7bwwd" path="res://level/PauseMenu.tscn" id="4_48pwy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4rjp7"]
 
@@ -161,3 +162,10 @@ theme_override_styles/background = SubResource("StyleBoxFlat_v6nij")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vasuy")
 value = 100.0
 show_percentage = false
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_48pwy")]
+visible = false
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0

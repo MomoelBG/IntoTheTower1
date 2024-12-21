@@ -3,9 +3,15 @@ extends Control
 @onready var audio = $audio
 @onready var resolution = $resolution
 @onready var controls = $Controls
+@onready var settings: Control = $"."
+
+
+func _ready():
+	visible = false
+
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://level/Title.tscn")
+	settings.visible = false
 
 
 

@@ -6,6 +6,8 @@ const  SPEED = 5
 @export var JUMP_VELOCITY = 10
 @export var fall_damage_threshold = 10
 
+@onready var pause_menu = $PauseMenu
+
 @export_category("Holding Objects")
 @export var throwForce = 7.5
 @export var followSpeed = 5.0
@@ -44,8 +46,9 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * .005)
 		camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)
 	if Input.is_action_just_pressed("quit"):
-		get_tree().change_scene_to_file("res://level/PauseMenu.tscn")
+		pause_menu.visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		
 
 
 func _ready():
