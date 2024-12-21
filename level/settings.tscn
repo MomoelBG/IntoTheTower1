@@ -44,6 +44,7 @@ layout_mode = 2
 text = "CONTROLES"
 
 [node name="audio" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -127,7 +128,6 @@ text = "RESOLUTION
 "
 
 [node name="Controls" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -149,6 +149,33 @@ offset_bottom = 75.0
 theme_override_font_sizes/font_size = 50
 text = "CONTROLES"
 
+[node name="Label3" type="Label" parent="Controls"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 101.0
+offset_right = 159.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 30
+text = "Ordinateur"
+
+[node name="Label4" type="Label" parent="Controls"]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 101.0
+offset_right = 407.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 30
+text = "PS5/Xbox"
+
+[node name="Label6" type="Label" parent="Controls"]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 101.0
+offset_right = 642.0
+offset_bottom = 143.0
+theme_override_font_sizes/font_size = 30
+text = "Mobile"
+
 [node name="Label2" type="Label" parent="Controls"]
 layout_mode = 1
 anchors_preset = -1
@@ -157,6 +184,24 @@ anchor_bottom = 1.0
 offset_left = 3.0
 offset_top = 138.0
 offset_right = -713.0
+offset_bottom = -238.0
+theme_override_font_sizes/font_size = 20
+text = "Avancer: Z
+Reculer: S
+Droite: D
+Gauche: Q
+Accélérer: R
+S'acroupire: Shift
+S'alonger: Ctrl"
+
+[node name="Label5" type="Label" parent="Controls"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 273.0
+offset_top = 138.0
+offset_right = -443.0
 offset_bottom = -238.0
 theme_override_font_sizes/font_size = 20
 text = "Avancer: Z
