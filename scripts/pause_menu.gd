@@ -1,6 +1,5 @@
 extends Control
 
-var paused = false
 @onready var settings = $Settings
 @onready var pause_menu = $"."
 
@@ -16,7 +15,6 @@ func _on_titlescreen_pressed():
 
 func _on_settings_pressed():
 	settings.visible = true
-
 
 func _on_continue_pressed():
 	pause_menu.visible = false
