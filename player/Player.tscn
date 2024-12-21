@@ -92,8 +92,9 @@ bg_color = Color(0.133333, 0.133333, 0.133333, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vasuy"]
 bg_color = Color(1, 0, 0.0980392, 1)
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("groundRay")]
 script = ExtResource("1_8nk7a")
+groundRay = NodePath("head/GroundRay")
 
 [node name="StadingCollisionShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

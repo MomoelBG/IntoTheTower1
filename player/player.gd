@@ -14,6 +14,9 @@ const  SPEED = 5
 @export var dropBelowPlayer = false
 @export var groundRay: RayCast3D
 
+@onready var interactRay = $head/Camera3D/InteractRay
+var heldObject : RigidBody3D
+
 
 var walkingSpeed = 0.5
 var crouchingSpeed = 3.5
@@ -51,6 +54,8 @@ func _ready():
 	
 
 func _physics_process(delta):
+	handle_holding_objects()
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -160,3 +165,40 @@ func changeCollisionShapeTo(shape):
 
 func hurt(damage : float):
 	progress_bar.value -= damage
+
+
+func set_held_object(body):
+	if body is RigidBody3D:
+		heldObject = body
+	
+func drop_held_object():
+	heldObject = null
+	
+func throw_held_object():
+	var obj = heldObject
+	drop_held_object()
+	obj.apply_central_impulse(-camera.global_basis.z * throwForce * 10)
+	
+func handle_holding_objects():
+	# Throwing Objects
+	if Input.is_action_just_pressed("throw"):
+		if heldObject != null: throw_held_object()
+		
+	# Dropping Objects
+	if Input.is_action_just_pressed("interact"):
+		if heldObject != null: drop_held_object()
+		elif interactRay.is_colliding(): set_held_object(interactRay.get_collider())
+		
+	# Object Following
+	if heldObject != null:
+		var targetPos = camera.global_transform.origin + (camera.global_basis * Vector3(0, 0, -followDistance)) # 2.5 units in front of camera
+		var objectPos = heldObject.global_transform.origin # Held object position
+		heldObject.linear_velocity = (targetPos - objectPos) * followSpeed # Our desired position
+		
+		# Drop the object if it's too far away from the camera
+		if heldObject.global_position.distance_to(camera.global_position) > maxDistanceFromCamera:
+			drop_held_object()
+			
+		# Drop the object if the player is standing on it (must enable dropBelowPlayer and set a groundRay/RayCast3D below the player)
+		if dropBelowPlayer && groundRay.is_colliding():
+			if groundRay.get_collider() == heldObject: drop_held_object()

@@ -14,11 +14,10 @@ ground_horizon_color = Color(0.548532, 0.657977, 0.719946, 1)
 sky_material = SubResource("ProceduralSkyMaterial_wi8ke")
 
 [sub_resource type="Environment" id="Environment_esr12"]
-background_mode = 1
+background_mode = 2
 background_color = Color(0.111197, 0.111197, 0.111197, 1)
 sky = SubResource("Sky_2kqg5")
 tonemap_mode = 2
-fog_enabled = true
 fog_density = 0.0338
 
 [sub_resource type="BoxMesh" id="BoxMesh_tmw0j"]
@@ -62,6 +61,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.134502, 36.2588, -0.176337
 
 [node name="Box" type="RigidBody3D" parent="RigidBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8396, 51.6742, -15.9264)
+mass = 10.0
+angular_damp = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody/Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00909567, 0, 0)
