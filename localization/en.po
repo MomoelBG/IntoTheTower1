@@ -1,0 +1,95 @@
+# LANGUAGE translation for Into The Tower for the following files:
+# res://level/Title.tscn
+# res://level/settings.tscn
+# res://level/PauseSettings.tscn
+# res://level/PauseMenu.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Into The Tower\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: level/Title.tscn
+msgid "JOUER"
+msgstr "PLAY"
+
+#: level/Title.tscn
+msgid "PARAMETRES"
+msgstr "SETTINGS"
+
+#: level/Title.tscn level/PauseMenu.tscn
+msgid "QUITTER"
+msgstr "LEAVE"
+
+#: level/settings.tscn level/PauseSettings.tscn
+msgid "AUDIO"
+msgstr "AUDIO"
+
+#: level/settings.tscn level/PauseSettings.tscn
+msgid "RESOLUTION"
+msgstr "RESOLUTION"
+
+#: level/settings.tscn level/PauseSettings.tscn
+msgid "CONTROLES"
+msgstr "CONTROLS"
+
+#: level/settings.tscn level/PauseSettings.tscn
+msgid "PLEIN ECRAN"
+msgstr "FULL SCREEN"
+
+#: level/settings.tscn level/PauseSettings.tscn
+msgid "1152x648"
+msgstr "1152x648"
+
+#: level/settings.tscn level/PauseSettings.tscn
+msgid "800x500"
+msgstr "800x500"
+
+#: level/settings.tscn level/PauseSettings.tscn
+msgid "RESOLUTION\n"
+msgstr "RESOLUTION\n"
+
+#: level/settings.tscn level/PauseSettings.tscn
+msgid ""
+"Avancer: Z\n"
+"Reculer: S\n"
+"Droite: D\n"
+"Gauche: Q\n"
+"Accélérer: R\n"
+"S'acroupire: Shift\n"
+"S'alonger: Ctrl"
+msgstr ""
+"Forward: Z\n"
+"Backward: S\n"
+"Left: Q\n"
+"Right: D\n"
+"Sprint: R\n"
+"Crouch: Shift\n"
+"Crawl: Ctrl"
+
+#: level/settings.tscn level/PauseSettings.tscn
+msgid "RETOUR"
+msgstr "BACK"
+
+#: level/PauseMenu.tscn
+msgid "CONTINUER"
+msgstr "CONTINUE"
+
+#: level/PauseMenu.tscn
+msgid "PARAMETRES\n"
+msgstr "SETTINGS\n"
+
+#: level/PauseMenu.tscn
+msgid "ECRAN DE TITRE"
+msgstr "TITLE SCREEN"
