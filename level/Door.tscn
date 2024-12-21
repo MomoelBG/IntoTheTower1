@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3aj37iyldj8w"]
+[gd_scene load_steps=9 format=3 uid="uid://b3aj37iyldj8w"]
 
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_8cnb2"]
 [ext_resource type="Material" uid="uid://fy13c0772xcs" path="res://materials/gray.tres" id="1_v10s0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xem7i"]
@@ -64,8 +65,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35024, 0)
 [node name="hinge" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.747222, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="hinge"]
+[node name="StaticBody3D" type="StaticBody3D" parent="hinge" node_paths=PackedStringArray("anim")]
 transform = Transform3D(1.472, 0, 0, 0, 2.705, 0, 0, 0, 0.168, -0.747222, 0, 0)
+script = ExtResource("1_8cnb2")
+anim = NodePath("../../AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D"]
 shape = SubResource("BoxShape3D_xem7i")
