@@ -7,6 +7,7 @@ const  SPEED = 5
 @export var fall_damage_threshold = 10
 
 @onready var pause_menu = $PauseMenu
+@onready var cam = $head/Camera3D
 
 @export_category("Holding Objects")
 @export var throwForce = 7.5
@@ -35,9 +36,8 @@ var old_vel : float = 0.0
 @onready var anim = $AnimationPlayer
 @onready var progress_bar = $ProgressBar
 
-
-
-
+func _enter_tree():
+	set_multiplayer_authority(name.to_int())
 
 
 func _unhandled_input(event):
@@ -47,14 +47,14 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)
 	if Input.is_action_just_pressed("quit"):
 		pause_menu.visible = true
+		$"../".exit_game(name.to_int())
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		
 
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
-	
+	cam.current = is_multiplayer_authority()
 
 func _physics_process(delta):
 	handle_holding_objects()
