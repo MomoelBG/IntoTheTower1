@@ -5,10 +5,14 @@ const  SPRINT_VELOCITY = 2
 const  SPEED = 5
 @export var JUMP_VELOCITY = 10
 @export var fall_damage_threshold = 10
-@export_category("Mobile Controls")
-@export var enable_mobile_controls = false
 
-
+@export_category("Holding Objects")
+@export var throwForce = 7.5
+@export var followSpeed = 5.0
+@export var followDistance = 2.5
+@export var maxDistanceFromCamera = 5.0
+@export var dropBelowPlayer = false
+@export var groundRay: RayCast3D
 
 
 var walkingSpeed = 0.5
@@ -25,6 +29,10 @@ var old_vel : float = 0.0
 @onready var camera = $head/Camera3D
 @onready var anim = $AnimationPlayer
 @onready var progress_bar = $ProgressBar
+
+
+
+
 
 
 func _unhandled_input(event):

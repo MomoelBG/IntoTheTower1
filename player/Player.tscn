@@ -101,6 +101,7 @@ shape = SubResource("CapsuleShape3D_4rjp7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_22pax")
 
 [node name="head" type="Node3D" parent="."]
@@ -108,8 +109,9 @@ mesh = SubResource("CapsuleMesh_22pax")
 [node name="Camera3D" type="Camera3D" parent="head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="RayCast3D" type="RayCast3D" parent="head/Camera3D"]
-transform = Transform3D(1.00344, 0, 0, 0, 0, -1.00344, 0, 1.00344, 0, 0, 0, 0)
+[node name="InteractRay" type="RayCast3D" parent="head/Camera3D"]
+transform = Transform3D(1.00344, 0, 0, 0, 1.00344, 4.38618e-08, 0, -4.38618e-08, 1.00344, 0, 0, 0)
+target_position = Vector3(0, 0, -2.5)
 script = ExtResource("2_4g8u8")
 
 [node name="crosshair" type="Label" parent="head/Camera3D"]
@@ -128,6 +130,9 @@ text = "."
 
 [node name="Flashlight" parent="head/Camera3D" instance=ExtResource("3_07f04")]
 transform = Transform3D(0.726082, 0, 0, 0, 0.726082, 0, 0, 0, 0.726082, 0.667195, -0.388531, -0.644709)
+
+[node name="GroundRay" type="RayCast3D" parent="head"]
+target_position = Vector3(0, -0.1, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
