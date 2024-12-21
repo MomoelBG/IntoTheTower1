@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://bdohntm1arwow"]
+[gd_scene load_steps=16 format=3 uid="uid://bdohntm1arwow"]
 
 [ext_resource type="Texture2D" uid="uid://bpn6apdns13qe" path="res://icon.svg" id="1_an45f"]
 [ext_resource type="PackedScene" uid="uid://0lfey5d30t3c" path="res://player/Player.tscn" id="1_tob75"]
+[ext_resource type="PackedScene" uid="uid://36t1yitxxrdb" path="res://player/UI/MobileControls/keyboardpressedbutton.tscn" id="3_mk42f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wi8ke"]
 sky_top_color = Color(0, 0.468086, 0.751154, 1)
@@ -1592,3 +1593,6 @@ material_override = SubResource("StandardMaterial3D_h2ttb")
 use_collision = true
 size = Vector3(0.156, 0.055, 0.156)
 material = SubResource("StandardMaterial3D_eb2d3")
+
+[node name="keyboardpressedbutton" parent="." instance=ExtResource("3_mk42f")]
+position = Vector2(8, 632)
