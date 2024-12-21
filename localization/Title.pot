@@ -1,0 +1,92 @@
+# LANGUAGE translation for Into The Tower for the following files:
+# res://level/Title.tscn
+# res://level/settings.tscn
+# res://level/PauseSettings.tscn
+# res://level/PauseMenu.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Into The Tower\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: level/Title.tscn
+msgid "JOUER"
+msgstr ""
+
+#: level/Title.tscn
+msgid "PARAMETRES"
+msgstr ""
+
+#: level/Title.tscn
+#: level/PauseMenu.tscn
+msgid "QUITTER"
+msgstr ""
+
+#: level/settings.tscn
+#: level/PauseSettings.tscn
+msgid "AUDIO"
+msgstr ""
+
+#: level/settings.tscn
+#: level/PauseSettings.tscn
+msgid "RESOLUTION"
+msgstr ""
+
+#: level/settings.tscn
+#: level/PauseSettings.tscn
+msgid "CONTROLES"
+msgstr ""
+
+#: level/settings.tscn
+#: level/PauseSettings.tscn
+msgid "PLEIN ECRAN"
+msgstr ""
+
+#: level/settings.tscn
+#: level/PauseSettings.tscn
+msgid "1152x648"
+msgstr ""
+
+#: level/settings.tscn
+#: level/PauseSettings.tscn
+msgid "800x500"
+msgstr ""
+
+#: level/settings.tscn
+#: level/PauseSettings.tscn
+msgid "RESOLUTION\n"
+msgstr ""
+
+#: level/settings.tscn
+#: level/PauseSettings.tscn
+msgid ""
+"Avancer: Z\n"
+"Reculer: S\n"
+"Droite: D\n"
+"Gauche: Q\n"
+"Accélérer: R\n"
+"S'acroupire: Shift\n"
+"S'alonger: Ctrl"
+msgstr ""
+
+#: level/settings.tscn
+#: level/PauseSettings.tscn
+msgid "RETOUR"
+msgstr ""
+
+#: level/PauseMenu.tscn
+msgid "CONTINUER"
+msgstr ""
+
+#: level/PauseMenu.tscn
+msgid "PARAMETRES\n"
+msgstr ""
+
+#: level/PauseMenu.tscn
+msgid "ECRAN DE TITRE"
+msgstr ""
