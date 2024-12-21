@@ -6,7 +6,8 @@ const  SPEED = 5
 @export var JUMP_VELOCITY = 10
 @export var fall_damage_threshold = 10
 @export_category("Mobile Controls")
-@export 
+@export var enable_mobile_controls = false
+
 
 
 
@@ -38,6 +39,9 @@ func _unhandled_input(event):
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if enable_mobile_controls = true
+
+	
 
 func _physics_process(delta):
 	# Add the gravity.
