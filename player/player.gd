@@ -47,14 +47,13 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)
 	if Input.is_action_just_pressed("quit"):
 		pause_menu.visible = true
-		$"../".exit_game(name.to_int())
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		
 
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	cam.current = is_multiplayer_authority()
+
 
 func _physics_process(delta):
 	handle_holding_objects()
