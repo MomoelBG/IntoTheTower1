@@ -5843,4 +5843,4 @@ use_collision = true
 size = Vector3(0.312195, 17.5002, 4.60418)
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("12_dw0hn")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.44681, 0.0412096, 8.1446)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.29634, 0.041209, 9.91232)
