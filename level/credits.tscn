@@ -37,18 +37,24 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
 text = "CREDITS"
 
-[node name="TITLE2" type="Label" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 50
-text = "LIENS"
-
 [node name="TEXT" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Carte du jeu par: MobStageStudio
 Joueur par: MobStageStudio
 "
+
+[node name="TITLE2" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "LIENS"
+
+[node name="TEXT2" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "YouTube:
+Discord:"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
