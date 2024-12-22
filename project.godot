@@ -8,16 +8,6 @@
 
 config_version=5
 
-_global_script_classes=[{
-"base": "Node",
-"class": "Interactable",
-"language": "GDScript",
-"path": "res://scenes/interactable/Interactable.gd"
-}]
-_global_script_class_icons={
-"Interactable": ""
-}
-
 [application]
 
 config/name="Door Keypad"
