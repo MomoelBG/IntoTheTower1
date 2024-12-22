@@ -135,7 +135,7 @@ grow_vertical = 2
 text = "."
 
 [node name="Flashlight" parent="head/Camera3D" instance=ExtResource("3_07f04")]
-transform = Transform3D(0.726082, 0, 0, 0, 0.726082, 0, 0, 0, 0.726082, 0.667195, -0.388531, -0.644709)
+transform = Transform3D(0.726082, 0, 0, 0, 0.726082, 0, 0, 0, 0.726082, -0.00135058, -0.388531, -0.644709)
 
 [node name="GroundRay" type="RayCast3D" parent="head"]
 target_position = Vector3(0, -0.1, 0)

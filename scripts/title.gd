@@ -1,6 +1,7 @@
 extends Control
 
 @onready var settings = $Settings
+@onready var credits = $Credits
 
 
 func _on_quit_pressed():
@@ -12,3 +13,7 @@ func _on_settings_pressed():
 
 func _on_jouer_pressed():
 	get_tree().change_scene_to_file("res://level/map.tscn")
+
+
+func _on_credits_pressed():
+	credits.visible = true

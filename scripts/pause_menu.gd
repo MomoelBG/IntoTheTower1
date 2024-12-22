@@ -2,7 +2,7 @@ extends Control
 
 @onready var settings = $Settings
 @onready var pause_menu = $"."
-
+@onready var credits = $Credits
 
 
 func _on_quit_pressed():
@@ -23,3 +23,6 @@ func _on_continue_pressed():
 
 func _on_reload_pressed():
 	get_tree().reload_current_scene()
+
+func _on_credits_pressed():
+	credits.visible = true

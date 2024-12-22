@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cijwgx3klstjr"]
+[gd_scene load_steps=2 format=3 uid="uid://cijwgx3klstjr"]
+
+[ext_resource type="Script" path="res://scripts/credits.gd" id="1_adxoo"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_adxoo")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -15,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.231373, 0.231373, 0.231373, 1)
+color = Color(0.231373, 0.231373, 0.231373, 0.756863)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -56,7 +59,7 @@ theme_override_font_sizes/font_size = 20
 text = "YouTube:
 Discord:"
 
-[node name="Button" type="Button" parent="."]
+[node name="Back" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -70,3 +73,5 @@ offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "RETOUR"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
