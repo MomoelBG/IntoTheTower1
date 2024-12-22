@@ -1,0 +1,21 @@
+[gd_resource type="Environment" load_steps=2 format=3 uid="uid://vgda2immd4yv"]
+
+[sub_resource type="Sky" id="1"]
+
+[resource]
+background_mode = 2
+sky = SubResource("1")
+ambient_light_color = Color(0.501961, 0.501961, 0.501961, 1)
+ambient_light_sky_contribution = 0.27
+ambient_light_energy = 1.39
+tonemap_mode = 2
+tonemap_exposure = 1.5
+tonemap_white = 4.29
+glow_levels/3 = 0.0
+glow_levels/4 = 1.0
+glow_levels/5 = 0.0
+glow_strength = 0.53
+glow_bloom = 1.0
+glow_blend_mode = 1
+adjustment_brightness = 0.5
+adjustment_contrast = 1.66
