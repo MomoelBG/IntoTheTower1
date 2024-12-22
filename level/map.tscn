@@ -23,10 +23,12 @@ ground_horizon_color = Color(0.548532, 0.657977, 0.719946, 1)
 sky_material = SubResource("ProceduralSkyMaterial_wi8ke")
 
 [sub_resource type="Environment" id="Environment_esr12"]
-background_mode = 2
-background_color = Color(0.111197, 0.111197, 0.111197, 1)
+background_mode = 1
 sky = SubResource("Sky_2kqg5")
+ambient_light_energy = 16.0
+reflected_light_source = 2
 tonemap_mode = 2
+fog_enabled = true
 fog_density = 0.0338
 
 [sub_resource type="BoxMesh" id="BoxMesh_tmw0j"]
