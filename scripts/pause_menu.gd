@@ -19,3 +19,7 @@ func _on_settings_pressed():
 func _on_continue_pressed():
 	pause_menu.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+
+func _on_reload_pressed():
+	get_tree().reload_current_scene()

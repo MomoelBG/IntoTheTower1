@@ -41,6 +41,11 @@ layout_mode = 2
 text = "PARAMETRES
 "
 
+[node name="RELOAD" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "RECHARGER
+"
+
 [node name="TITLESCREEN" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "ECRAN DE TITRE"
@@ -57,5 +62,6 @@ offset_bottom = 4.0
 
 [connection signal="pressed" from="VBoxContainer/CONTINUE" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/SETTINGS" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/RELOAD" to="." method="_on_reload_pressed"]
 [connection signal="pressed" from="VBoxContainer/TITLESCREEN" to="." method="_on_titlescreen_pressed"]
 [connection signal="pressed" from="VBoxContainer/QUIT" to="." method="_on_quit_pressed"]

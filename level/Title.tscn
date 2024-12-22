@@ -29,21 +29,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = -97.0
-offset_right = 77.0
-offset_bottom = 97.0
+offset_left = -84.0
+offset_top = -68.0
+offset_right = 84.0
+offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="jouer" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "REJOINDRE
-"
+text = "JOUER"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "PARAMETRES"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "CREDITS"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
