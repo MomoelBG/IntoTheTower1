@@ -5699,3 +5699,20 @@ script = ExtResource("6_5yr4d")
 
 [node name="Player" parent="." instance=ExtResource("1_tob75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.943783, 0.0412102, -2.05607)
+
+[node name="house" type="Node" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="house"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.472, 3.465, 6.18103)
+use_collision = true
+size = Vector3(2.08423, 1.59418, 0.299927)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="house"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.7286, 2.15727, 6.18103)
+use_collision = true
+size = Vector3(11.4575, 4.21655, 0.299927)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="house"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9349, 2.15727, 6.18103)
+use_collision = true
+size = Vector3(11.4575, 4.21655, 0.299927)
