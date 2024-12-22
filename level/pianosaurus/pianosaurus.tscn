@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=4 uid="uid://d4mm62l5g1ijt"]
+[gd_scene load_steps=106 format=4 uid="uid://d4mm62l5g1ijt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mub66"]
 resource_name = "Horn101Mtl"
@@ -1044,6 +1044,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mtqpi")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2lvlv"]
+size = Vector3(1.43524, 1.29553, 2.87939)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u50n5"]
+size = Vector3(1.28784, 1.34778, 4.64008)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5ckx"]
 resource_name = "Body00121Mtl"
 cull_mode = 2
@@ -1437,10 +1443,28 @@ skeleton = NodePath("")
 transform = Transform3D(-9.05306e-08, -1, 2.99072e-16, 2.0711, -4.37114e-08, 2.99072e-16, -4.59877e-16, 2.22045e-16, 1.3469, -4.8324, -18.0768, 12.7983)
 shape = SubResource("CylinderShape3D_kf8re")
 
-[node name="Object_30" type="MeshInstance3D" parent="Sketchfab_model/Pianosaurus_obj_cleaner_materialmerger_gles"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/Pianosaurus_obj_cleaner_materialmerger_gles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6422, 18.2956, -4.06244e-15)
+
+[node name="Object_30" type="MeshInstance3D" parent="Sketchfab_model/Pianosaurus_obj_cleaner_materialmerger_gles/StaticBody3D"]
 mesh = SubResource("ArrayMesh_h3n0b")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Pianosaurus_obj_cleaner_materialmerger_gles/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80959, -19.8129, 2.7522)
+shape = SubResource("BoxShape3D_2lvlv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sketchfab_model/Pianosaurus_obj_cleaner_materialmerger_gles/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.80959, -16.2646, 2.7522)
+shape = SubResource("BoxShape3D_2lvlv")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Sketchfab_model/Pianosaurus_obj_cleaner_materialmerger_gles/StaticBody3D"]
+transform = Transform3D(0.927843, -8.28165e-17, -0.372972, 8.28165e-17, 1, -1.60222e-17, 0.372972, -1.60222e-17, 0.927843, -12.4242, -15.6746, 2.05584)
+shape = SubResource("BoxShape3D_u50n5")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Sketchfab_model/Pianosaurus_obj_cleaner_materialmerger_gles/StaticBody3D"]
+transform = Transform3D(0.927843, -8.28165e-17, -0.372972, 8.28165e-17, 1, -1.60222e-17, 0.372972, -1.60222e-17, 0.927843, -12.4242, -20.1125, 2.05584)
+shape = SubResource("BoxShape3D_u50n5")
 
 [node name="Object_31" type="MeshInstance3D" parent="Sketchfab_model/Pianosaurus_obj_cleaner_materialmerger_gles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6422, 18.2956, -4.06244e-15)
