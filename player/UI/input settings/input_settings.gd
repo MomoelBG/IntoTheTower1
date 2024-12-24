@@ -8,6 +8,21 @@ var is_remapping = false
 var action_to_remap = null
 var remapping_button = null
 
+var input_action = {
+	"forward": "Forward",
+	"backward": "Backward",
+	"left": "Left",
+	"right": "Right",
+	"interact": "Interact",
+	"jump": "Jump",
+	"sprint": "Sprint",
+	"Toggle": "on",
+	"toggle": "off",
+	"throw": "Throw",
+	"crouch": "Crouch",
+	"crawl": "Crawl"
+}
+
 
 func _ready():
 	_create_action_list()
