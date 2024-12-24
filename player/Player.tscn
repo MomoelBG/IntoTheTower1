@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player/player.gd" id="1_8nk7a"]
 [ext_resource type="Script" path="res://player/ray_cast_3d.gd" id="2_4g8u8"]
 [ext_resource type="Script" path="res://player/raycast.gd" id="3_02xt0"]
-[ext_resource type="PackedScene" uid="uid://d0pjwia75luq6" path="res://Flashlight.tscn" id="3_07f04"]
+[ext_resource type="PackedScene" uid="uid://d0pjwia75luq6" path="res://player/Flashlight.tscn" id="3_07f04"]
 [ext_resource type="PackedScene" uid="uid://cvq1e8oa7bwwd" path="res://level/PauseMenu.tscn" id="4_48pwy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4rjp7"]

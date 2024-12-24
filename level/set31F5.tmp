@@ -1,0 +1,362 @@
+[gd_scene load_steps=9 format=3 uid="uid://blejtq8ghcntx"]
+
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_xnn61"]
+[ext_resource type="PackedScene" uid="uid://cw0slo6ycg37l" path="res://player/UI/input settings/input_settings.tscn" id="2_vr2sb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8m3b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_300ld"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q4dao"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pld8l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvcqw"]
+
+[sub_resource type="Theme" id="Theme_8vw56"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_j8m3b")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_300ld")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_q4dao")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_pld8l")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_wvcqw")
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xnn61")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.231373, 0.231373, 0.231373, 1)
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.334
+anchor_top = 0.046
+anchor_right = 0.666
+anchor_bottom = 0.114
+offset_left = 0.231964
+offset_top = 0.191998
+offset_right = -0.231995
+offset_bottom = 0.127998
+grow_horizontal = 2
+alignment = 1
+
+[node name="audio" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 15
+text = "AUDIO"
+
+[node name="resolution" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 15
+text = "RESOLUTION"
+
+[node name="controls" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CONTROLES"
+
+[node name="InputControls" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TOUCHES"
+
+[node name="audio" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -248.5
+offset_right = 288.0
+offset_bottom = 248.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSlider" type="HSlider" parent="audio"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -86.0
+offset_right = 554.0
+offset_bottom = -70.0
+grow_vertical = 2
+focus_neighbor_bottom = NodePath("../../resolution/OptionButton")
+focus_next = NodePath("../../resolution/OptionButton")
+
+[node name="Label" type="Label" parent="audio"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.5
+offset_right = 80.5
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "AUDIO"
+
+[node name="CheckButton" type="CheckButton" parent="audio"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 232.0
+offset_right = 166.0
+offset_bottom = 263.0
+text = "PLEIN ECRAN"
+
+[node name="resolution" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchor_left = 0.132
+anchor_top = 0.119
+anchor_right = 0.889
+anchor_bottom = 1.037
+offset_left = -0.0639954
+offset_top = -0.112
+offset_right = -0.128052
+offset_bottom = -74.976
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionButton" type="OptionButton" parent="resolution"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = -145.5
+offset_right = 153.0
+offset_bottom = -114.5
+grow_vertical = 2
+item_count = 2
+popup/item_0/text = "1152x648"
+popup/item_1/text = "800x500"
+popup/item_1/id = 2
+
+[node name="Label" type="Label" parent="resolution"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -156.5
+offset_right = 156.5
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "RESOLUTION
+"
+
+[node name="controles" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -363.0
+offset_top = -223.0
+offset_right = 421.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8vw56")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="controles"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="controles/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "CONTROLES"
+
+[node name="Control" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control5" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control6" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control7" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="controles/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Ordinateur"
+
+[node name="Control8" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control9" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="controles/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Avancer: Z
+Reculer: S
+Droite: D
+Gauche: Q
+Accélérer: R
+S'acroupire: Shift
+S'alonger: Ctrl"
+
+[node name="Control11" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control12" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control13" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control14" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control15" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control16" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control17" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control18" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control19" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="controles/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "PS5/Xbox"
+
+[node name="Control10" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control20" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="controles/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Avancer: Z
+Reculer: S
+Droite: D
+Gauche: Q
+Accélérer: R
+S'acroupire: Shift
+S'alonger: Ctrl"
+
+[node name="Control21" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control22" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control23" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control24" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control25" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control26" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control27" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control28" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control29" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="controles/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Mobile"
+
+[node name="Control30" type="Control" parent="controles/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label8" type="Label" parent="controles/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Avancer: Z
+Reculer: S
+Droite: D
+Gauche: Q
+Accélérer: R
+S'acroupire: Shift
+S'alonger: Ctrl"
+
+[node name="InputSettings" parent="." instance=ExtResource("2_vr2sb")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -39.0
+offset_right = -16.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+focus_neighbor_top = NodePath("../resolution/OptionButton")
+focus_previous = NodePath("../resolution/OptionButton")
+text = "RETOUR"
+
+[connection signal="pressed" from="VBoxContainer/audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="VBoxContainer/resolution" to="." method="_on_resolution_pressed"]
+[connection signal="pressed" from="VBoxContainer/controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="VBoxContainer/InputControls" to="." method="_on_input_controls_pressed"]
+[connection signal="value_changed" from="audio/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="toggled" from="audio/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="item_selected" from="resolution/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
