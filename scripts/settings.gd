@@ -2,7 +2,7 @@ extends Control
 
 @onready var audio = $audio
 @onready var resolution = $resolution
-@onready var controls = $Controls
+@onready var controles = $controles
 @onready var settings: Control = $"."
 
 
@@ -18,17 +18,17 @@ func _on_button_pressed():
 func _on_audio_pressed():
 	audio.visible = true
 	resolution.visible = false
-	controls.visible = false
+	controles.visible = false
 
 func _on_resolution_pressed():
 	audio.visible = false
-	controls.visible = false
+	controles.visible = false
 	resolution.visible = true
 
 func _on_controls_pressed():
 	audio.visible = false
 	resolution.visible = false
-	controls.visible = true
+	controles.visible = true
 
 func _on_h_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(0,value)
