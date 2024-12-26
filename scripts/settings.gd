@@ -32,7 +32,6 @@ func _on_controls_pressed():
 	controles.visible = true
 
 
-
 func _on_h_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(0,value)
 

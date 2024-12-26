@@ -162,7 +162,6 @@ text = "RESOLUTION
 "
 
 [node name="controles" type="ScrollContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -186,9 +185,6 @@ size_flags_vertical = 3
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "CONTROLES"
-
-[node name="Control" type="Control" parent="controles/VBoxContainer"]
-layout_mode = 2
 
 [node name="Control2" type="Control" parent="controles/VBoxContainer"]
 layout_mode = 2
@@ -340,6 +336,7 @@ grow_horizontal = 0
 grow_vertical = 0
 focus_neighbor_top = NodePath("../resolution/OptionButton")
 focus_previous = NodePath("../resolution/OptionButton")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "RETOUR"
 
 [connection signal="pressed" from="VBoxContainer/audio" to="." method="_on_audio_pressed"]
